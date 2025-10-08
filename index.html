@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSS - Simple Software Solutions</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">SSS</span>
+                <span class="logo-bracket">/&gt;</span>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link active">Inicio</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+            </nav>
+            <div class="header-actions">
+                <div class="search-container">
+                    <button class="btn-icon search-toggle" id="searchToggle">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <div class="search-dropdown" id="searchDropdown">
+                        <div class="search-input-wrapper">
+                            <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                            <input type="text" class="search-input" id="searchInput" placeholder="Buscar artículos, biografías, tecnologías...">
+                            <button class="search-clear" id="searchClear">×</button>
+                        </div>
+                        <div class="search-results" id="searchResults">
+                            <div class="search-empty">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <path d="m21 21-4.35-4.35"></path>
+                                </svg>
+                                <p>Escribe para buscar artículos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                    </svg>
+                </button>
+                <div class="user-avatar">
+                    <img src="https://ui-avatars.com/api/?name=Usuario&background=4ECCA3&color=fff" alt="User">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Carousel Section -->
+    <section class="hero-carousel">
+        <div class="container">
+            <div class="carousel-wrapper">
+                <button class="carousel-btn carousel-btn-left" id="prevBtn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                
+                <div class="carousel-container">
+                    <div class="carousel-track" id="carouselTrack">
+                        <!-- Slide 1 -->
+                        <div class="carousel-slide active">
+                            <div class="slide-content">
+                                <div class="slide-text">
+                                    <span class="slide-badge">Destacado</span>
+                                    <h1>Guido van Rossum: El Creador de Python</h1>
+                                    <p>Descubre la historia del desarrollador holandés que revolucionó la programación con uno de los lenguajes más populares y versátiles del mundo moderno.</p>
+                                    <a href="#" class="btn-primary">Leer artículo →</a>
+                                </div>
+                                <div class="slide-image">
+                                    <div class="featured-icon">🐍</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="carousel-slide">
+                            <div class="slide-content">
+                                <div class="slide-text">
+                                    <span class="slide-badge">Nuevo</span>
+                                    <h1>Computación Cuántica: El Futuro Hoy</h1>
+                                    <p>Exploramos los últimos avances en computación cuántica y cómo esta tecnología está cambiando el panorama de la informática moderna.</p>
+                                    <a href="#" class="btn-primary">Explorar →</a>
+                                </div>
+                                <div class="slide-image">
+                                    <div class="featured-icon">⚛️</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="carousel-slide">
+                            <div class="slide-content">
+                                <div class="slide-text">
+                                    <span class="slide-badge">Popular</span>
+                                    <h1>Algoritmos: La Base de la Programación</h1>
+                                    <p>Guía completa sobre estructuras de datos y algoritmos fundamentales que todo ingeniero de software debe dominar.</p>
+                                    <a href="#" class="btn-primary">Comenzar →</a>
+                                </div>
+                                <div class="slide-image">
+                                    <div class="featured-icon">📊</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-btn carousel-btn-right" id="nextBtn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="carousel-indicators" id="indicators">
+                <span class="indicator active"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Content Section -->
+    <section class="featured-section">
+        <div class="container">
+            <h2 class="section-title">Contenido destacado</h2>
+            
+            <div class="cards-grid">
+                <!-- Card 1 -->
+                <article class="content-card">
+                    <div class="card-header">
+                        <span class="card-badge badge-biografia">Biografía</span>
+                    </div>
+                    <div class="card-icon">👨‍💻</div>
+                    <h3>Alan Turing: Padre de la Computación</h3>
+                    <p>El matemático que descifró Enigma y sentó las bases de la ciencia de la computación.</p>
+                    <div class="card-meta">
+                        <span>⏱️ 8 min</span>
+                        <span>📅 Oct 15</span>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="content-card">
+                    <div class="card-header">
+                        <span class="card-badge badge-tecnologia">Tecnología</span>
+                    </div>
+                    <div class="card-icon">⚛️</div>
+                    <h3>React 19: Nuevas Características</h3>
+                    <p>Exploramos las mejoras en rendimiento y las nuevas APIs de la última versión.</p>
+                    <div class="card-meta">
+                        <span>⏱️ 6 min</span>
+                        <span>📅 Oct 10</span>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="content-card">
+                    <div class="card-header">
+                        <span class="card-badge badge-apunte">Apunte</span>
+                    </div>
+                    <div class="card-icon">📚</div>
+                    <h3>Patrones de Diseño Esenciales</h3>
+                    <p>Singleton, Factory, Observer y más patrones que debes conocer.</p>
+                    <div class="card-meta">
+                        <span>⏱️ 15 min</span>
+                        <span>📅 Oct 5</span>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="content-card">
+                    <div class="card-header">
+                        <span class="card-badge badge-noticia">Noticia</span>
+                    </div>
+                    <div class="card-icon">🚀</div>
+                    <h3>WebAssembly Gana Adopción</h3>
+                    <p>El estándar que permite ejecutar código nativo en navegadores web.</p>
+                    <div class="card-meta">
+                        <span>⏱️ 5 min</span>
+                        <span>📅 Sep 28</span>
+                    </div>
+                </article>
+
+                <!-- Card 5 -->
+                <article class="content-card">
+                    <div class="card-header">
+                        <span class="card-badge badge-biografia">Biografía</span>
+                    </div>
+                    <div class="card-icon">👩‍💻</div>
+                    <h3>Grace Hopper: Pionera del COBOL</h3>
+                    <p>La almirante que desarrolló el primer compilador de la historia.</p>
+                    <div class="card-meta">
+                        <span>⏱️ 10 min</span>
+                        <span>📅 Sep 20</span>
+                    </div>
+                </article>
+
+                <!-- Card 6 -->
+                <article class="content-card">
+                    <div class="card-header">
+                        <span class="card-badge badge-tecnologia">Tecnología</span>
+                    </div>
+                    <div class="card-icon">🤖</div>
+                    <h3>Machine Learning con TensorFlow</h3>
+                    <p>Introducción práctica a redes neuronales y deep learning.</p>
+                    <div class="card-meta">
+                        <span>⏱️ 20 min</span>
+                        <span>📅 Sep 15</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Simple Software Solutions</h3>
+                    <p>Tu centro de apuntes sobre ingeniería de software, biografías tecnológicas y avances científicos.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categorías</h4>
+                    <ul>
+                        <li><a href="blog.html?filter=biografia">Biografías</a></li>
+                        <li><a href="blog.html?filter=apunte">Apuntes</a></li>
+                        <li><a href="blog.html?filter=tecnologia">Tecnologías</a></li>
+                        <li><a href="blog.html?filter=noticia">Noticias</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Simple Software Solutions. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

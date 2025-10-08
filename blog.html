@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - SSS</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">SSS</span>
+                <span class="logo-bracket">/&gt;</span>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="blog.html" class="nav-link active">Blog</a>
+            </nav>
+            <div class="header-actions">
+                <div class="search-container">
+                    <button class="btn-icon search-toggle" id="searchToggle">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <div class="search-dropdown" id="searchDropdown">
+                        <div class="search-input-wrapper">
+                            <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                            <input type="text" class="search-input" id="searchInput" placeholder="Buscar artículos, biografías, tecnologías...">
+                            <button class="search-clear" id="searchClear">×</button>
+                        </div>
+                        <div class="search-results" id="searchResults">
+                            <div class="search-empty">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <path d="m21 21-4.35-4.35"></path>
+                                </svg>
+                                <p>Escribe para buscar artículos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                    </svg>
+                </button>
+                <div class="user-avatar">
+                    <img src="https://ui-avatars.com/api/?name=Usuario&background=4ECCA3&color=fff" alt="User">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Content -->
+    <main class="container">
+        <div class="blog-layout">
+            <!-- Sidebar with Filters -->
+            <aside class="sidebar">
+                <div class="filter-section">
+                    <h3 class="filter-title">Filtros</h3>
+                    <div class="filter-group">
+                        <div class="filter-item">
+                            <input type="checkbox" id="filter-all" value="all" checked>
+                            <label for="filter-all">Todas las categorías</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3 class="filter-title">Categorías</h3>
+                    <div class="filter-group">
+                        <div class="filter-item">
+                            <input type="checkbox" id="filter-biografia" value="biografia">
+                            <label for="filter-biografia">Biografías</label>
+                        </div>
+                        <div class="filter-item">
+                            <input type="checkbox" id="filter-apunte" value="apunte">
+                            <label for="filter-apunte">Apuntes</label>
+                        </div>
+                        <div class="filter-item">
+                            <input type="checkbox" id="filter-tecnologia" value="tecnologia">
+                            <label for="filter-tecnologia">Tecnologías</label>
+                        </div>
+                        <div class="filter-item">
+                            <input type="checkbox" id="filter-noticia" value="noticia">
+                            <label for="filter-noticia">Noticias</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3 class="filter-title">Nivel</h3>
+                    <div class="filter-group">
+                        <div class="filter-item">
+                            <input type="checkbox" id="level-beginner" value="beginner">
+                            <label for="level-beginner">Principiante</label>
+                        </div>
+                        <div class="filter-item">
+                            <input type="checkbox" id="level-intermediate" value="intermediate">
+                            <label for="level-intermediate">Intermedio</label>
+                        </div>
+                        <div class="filter-item">
+                            <input type="checkbox" id="level-advanced" value="advanced">
+                            <label for="level-advanced">Avanzado</label>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Blog Content Area -->
+            <div class="blog-content">
+                <div class="blog-header">
+                    <h1>Todas las publicaciones</h1>
+                    <p class="results-count">24 resultados</p>
+                </div>
+
+                <div class="blog-cards-grid">
+                    <!-- Blog Card 1 -->
+                    <article class="blog-card" data-category="biografia">
+                        <div class="card-header">
+                            <span class="card-badge badge-biografia">Biografía</span>
+                        </div>
+                        <div class="card-icon">🐍</div>
+                        <h3>Guido van Rossum: El Creador de Python</h3>
+                        <p>La historia del desarrollador holandés que revolucionó la programación.</p>
+                        <div class="card-meta">
+                            <span>⏱️ 10 min</span>
+                            <span>📅 Oct 15</span>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 2 -->
+                    <article class="blog-card" data-category="biografia">
+                        <div class="card-header">
+                            <span class="card-badge badge-biografia">Biografía</span>
+                        </div>
+                        <div class="card-icon">👨‍💻</div>
+                        <h3>Alan Turing: Padre de la Computación</h3>
+                        <p>El matemático que sentó las bases de la ciencia de la computación.</p>
+                        <div class="card-meta">
+                            <span>⏱️ 8 min</span>
+                            <span>📅 Oct 12</span>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 3 -->
+                    <article class="blog-card" data-category="apunte">
+                        <div class="card-header">
+                            <span class="card-badge badge-apunte">Apunte</span>
+                        </div>
+                        <div class="card-icon">📚</div>
+                        <h3>Algoritmos de Ordenamiento</h3>
+                        <p>Análisis completo de QuickSort, MergeSort y más.</p>
+                        <div class="card-meta">
+                            <span>⏱️ 12 min</span>
+                            <span>📅 Oct 10</span>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 4 -->
+                    <article class="blog-card" data-category="tecnologia">
+                        <div class="card-header">
+                            <span class="card-badge badge-tecnologia">Tecnología</span>
+                        </div>
+                        <div class="card-icon">⚛️</div>
+                        <h3>React 19: Novedades y Mejoras</h3>
+                        <p>Exploramos las nuevas características de React 19.</p>
+                        <div class="card-meta">
+                            <span>⏱️ 6 min</span>
+                            <span>📅 Oct 8</span>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 5 -->
+                    <article class="blog-card" data-category="noticia">
+                        <div class="card-header">
+                            <span class="card-badge badge-noticia">Noticia</span>
+                        </div>
+                        <div class="card-icon">🚀</div>
+                        <h3>Avances en Computación Cuántica</h3>
+                        <p>Google anuncia un nuevo hito en computación cuántica.</p>
+                        <div class="card-meta">
+                            <span>⏱️ 5 min</span>
+                            <span>📅 Oct 5</span>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 6 -->
+                    <article class="blog-card" data-category="biografia">
+                        <div class="card-header">
+                            <span class="card-badge badge-biografia">Biografía</span>
+                        </div>
+                        <div class="card-icon">👩‍💻</div>
+                        <h3>Grace Hopper: Pionera del COBOL</h3>
+                        <p>La almirante que desarrolló el primer compilador.</p>
+                        <div class="card-meta">
+                            <span>⏱️ 10 min</span>
+                            <span>📅 Oct 2</span>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 7 -->
+                    <article class="blog-card" data-category="apunte">
+                        <div class="card-header">
+                            <span class="card-badge badge-apunte">Apunte</span>
+                        </div>
+                        <div class="card-icon">🔐</div>
+                        <h3>Patrones de Diseño: Singleton y Factory</h3>
+                        <p>Guía práctica sobre patrones de diseño fundamentales.</p>
+                        <div class="card-meta">
+                            <span>⏱️ 15 min</span>
+                            <span>📅 Sep 28</span>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 8 -->
+                    <article class="blog-card" data-category="tecnologia">
+                        <div class="card-header">
+                            <span class="card-badge badge-tecnologia">Tecnología</span>
+                        </div>
+                        <div class="card-icon">🤖</div>
+                        <h3>Machine Learning con TensorFlow</h3>
+                        <p>Introducción a redes neuronales y deep learning.</p>
+                        <div class="card-meta">
+                            <span>⏱️ 20 min</span>
+                            <span>📅 Sep 25</span>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 9 -->
+                    <article class="blog-card" data-category="noticia">
+                        <div class="card-header">
+                            <span class="card-badge badge-noticia">Noticia</span>
+                        </div>
+                        <div class="card-icon">🌐</div>
+                        <h3>WebAssembly Gana Terreno</h3>
+                        <p>El estándar que permite código de alto rendimiento en navegadores.</p>
+                        <div class="card-meta">
+                            <span>⏱️ 7 min</span>
+                            <span>📅 Sep 20</span>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 10 -->
+                    <article class="blog-card" data-category="biografia">
+                        <div class="card-header">
+                            <span class="card-badge badge-biografia">Biografía</span>
+                        </div>
+                        <div class="card-icon">💡</div>
+                        <h3>Dennis Ritchie: El Creador de C</h3>
+                        <p>La historia del informático que creó el lenguaje C y Unix.</p>
+                        <div class="card-meta">
+                            <span>⏱️ 9 min</span>
+                            <span>📅 Sep 15</span>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 11 -->
+                    <article class="blog-card" data-category="apunte">
+                        <div class="card-header">
+                            <span class="card-badge badge-apunte">Apunte</span>
+                        </div>
+                        <div class="card-icon">🗄️</div>
+                        <h3>Bases de Datos: SQL vs NoSQL</h3>
+                        <p>Comparación detallada entre bases de datos relacionales y no relacionales.</p>
+                        <div class="card-meta">
+                            <span>⏱️ 18 min</span>
+                            <span>📅 Sep 12</span>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 12 -->
+                    <article class="blog-card" data-category="tecnologia">
+                        <div class="card-header">
+                            <span class="card-badge badge-tecnologia">Tecnología</span>
+                        </div>
+                        <div class="card-icon">☁️</div>
+                        <h3>Arquitectura de Microservicios</h3>
+                        <p>Cómo diseñar sistemas escalables con microservicios.</p>
+                        <div class="card-meta">
+                            <span>⏱️ 14 min</span>
+                            <span>📅 Sep 8</span>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 13 -->
+                    <article class="blog-card" data-category="noticia">
+                        <div class="card-header">
+                            <span class="card-badge badge-noticia">Noticia</span>
+                        </div>
+                        <div class="card-icon">🔒</div>
+                        <h3>Nuevos Estándares de Ciberseguridad</h3>
+                        <p>Las últimas actualizaciones en protocolos de seguridad web.</p>
+                        <div class="card-meta">
+                            <span>⏱️ 6 min</span>
+                            <span>📅 Sep 5</span>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 14 -->
+                    <article class="blog-card" data-category="biografia">
+                        <div class="card-header">
+                            <span class="card-badge badge-biografia">Biografía</span>
+                        </div>
+                        <div class="card-icon">🖥️</div>
+                        <h3>Ada Lovelace: Primera Programadora</h3>
+                        <p>La visionaria matemática que escribió el primer algoritmo.</p>
+                        <div class="card-meta">
+                            <span>⏱️ 11 min</span>
+                            <span>📅 Sep 1</span>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 15 -->
+                    <article class="blog-card" data-category="apunte">
+                        <div class="card-header">
+                            <span class="card-badge badge-apunte">Apunte</span>
+                        </div>
+                        <div class="card-icon">🔄</div>
+                        <h3>Principios SOLID de Programación</h3>
+                        <p>Los cinco principios fundamentales del diseño orientado a objetos.</p>
+                        <div class="card-meta">
+                            <span>⏱️ 16 min</span>
+                            <span>📅 Ago 28</span>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 16 -->
+                    <article class="blog-card" data-category="tecnologia">
+                        <div class="card-header">
+                            <span class="card-badge badge-tecnologia">Tecnología</span>
+                        </div>
+                        <div class="card-icon">📱</div>
+                        <h3>Flutter: Desarrollo Multiplataforma</h3>
+                        <p>Crea aplicaciones nativas para móvil, web y desktop.</p>
+                        <div class="card-meta">
+                            <span>⏱️ 13 min</span>
+                            <span>📅 Ago 25</span>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 17 -->
+                    <article class="blog-card" data-category="noticia">
+                        <div class="card-header">
+                            <span class="card-badge badge-noticia">Noticia</span>
+                        </div>
+                        <div class="card-icon">🧠</div>
+                        <h3>IA Generativa: El Futuro del Código</h3>
+                        <p>Cómo los modelos de lenguaje están transformando el desarrollo.</p>
+                        <div class="card-meta">
+                            <span>⏱️ 9 min</span>
+                            <span>📅 Ago 20</span>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 18 -->
+                    <article class="blog-card" data-category="apunte">
+                        <div class="card-header">
+                            <span class="card-badge badge-apunte">Apunte</span>
+                        </div>
+                        <div class="card-icon">🎯</div>
+                        <h3>Testing: Unit, Integration y E2E</h3>
+                        <p>Estrategias y mejores prácticas para testing de software.</p>
+                        <div class="card-meta">
+                            <span>⏱️ 17 min</span>
+                            <span>📅 Ago 15</span>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 19 -->
+                    <article class="blog-card" data-category="tecnologia">
+                        <div class="card-header">
+                            <span class="card-badge badge-tecnologia">Tecnología</span>
+                        </div>
+                        <div class="card-icon">🐳</div>
+                        <h3>Docker y Kubernetes en Producción</h3>
+                        <p>Containerización y orquestación para aplicaciones escalables.</p>
+                        <div class="card-meta">
+                            <span>⏱️ 22 min</span>
+                            <span>📅 Ago 10</span>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 20 -->
+                    <article class="blog-card" data-category="biografia">
+                        <div class="card-header">
+                            <span class="card-badge badge-biografia">Biografía</span>
+                        </div>
+                        <div class="card-icon">🌟</div>
+                        <h3>Linus Torvalds: Creador de Linux</h3>
+                        <p>El estudiante que revolucionó el mundo del software libre.</p>
+                        <div class="card-meta">
+                            <span>⏱️ 12 min</span>
+                            <span>📅 Ago 5</span>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 21 -->
+                    <article class="blog-card" data-category="apunte">
+                        <div class="card-header">
+                            <span class="card-badge badge-apunte">Apunte</span>
+                        </div>
+                        <div class="card-icon">⚡</div>
+                        <h3>Optimización de Rendimiento Web</h3>
+                        <p>Técnicas para hacer tu sitio web más rápido y eficiente.</p>
+                        <div class="card-meta">
+                            <span>⏱️ 19 min</span>
+                            <span>📅 Ago 1</span>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 22 -->
+                    <article class="blog-card" data-category="tecnologia">
+                        <div class="card-header">
+                            <span class="card-badge badge-tecnologia">Tecnología</span>
+                        </div>
+                        <div class="card-icon">🎨</div>
+                        <h3>CSS Grid y Flexbox Avanzado</h3>
+                        <p>Domina los layouts modernos de CSS para interfaces responsivas.</p>
+                        <div class="card-meta">
+                            <span>⏱️ 11 min</span>
+                            <span>📅 Jul 28</span>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 23 -->
+                    <article class="blog-card" data-category="noticia">
+                        <div class="card-header">
+                            <span class="card-badge badge-noticia">Noticia</span>
+                        </div>
+                        <div class="card-icon">🌍</div>
+                        <h3>Web3 y Blockchain: Estado Actual</h3>
+                        <p>Un análisis sobre la adopción de tecnologías descentralizadas.</p>
+                        <div class="card-meta">
+                            <span>⏱️ 8 min</span>
+                            <span>📅 Jul 25</span>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 24 -->
+                    <article class="blog-card" data-category="apunte">
+                        <div class="card-header">
+                            <span class="card-badge badge-apunte">Apunte</span>
+                        </div>
+                        <div class="card-icon">🔧</div>
+                        <h3>Git y GitHub: Flujos de Trabajo</h3>
+                        <p>Estrategias de branching y mejores prácticas de control de versiones.</p>
+                        <div class="card-meta">
+                            <span>⏱️ 14 min</span>
+                            <span>📅 Jul 20</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Simple Software Solutions</h3>
+                    <p>Tu centro de apuntes sobre ingeniería de software, biografías tecnológicas y avances científicos.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categorías</h4>
+                    <ul>
+                        <li><a href="blog.html?filter=biografia">Biografías</a></li>
+                        <li><a href="blog.html?filter=apunte">Apuntes</a></li>
+                        <li><a href="blog.html?filter=tecnologia">Tecnologías</a></li>
+                        <li><a href="blog.html?filter=noticia">Noticias</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Simple Software Solutions. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
